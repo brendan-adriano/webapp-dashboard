@@ -116,7 +116,7 @@ svg {
     display: flex;
     background-color: #7477bf;
     border-radius: 4px;
-    width: 90vw;
+    width: 90%;
     margin: 0 1em;
 }
 
@@ -134,7 +134,7 @@ svg {
 .daily, 
 .mobile,
 .message {
-    border-bottom: lightgray 1px solid;
+    border: lightgray 1px solid;
 }
 
 .active {
@@ -171,7 +171,10 @@ svg {
 .fb-icon,
 .ig-icon,
 .tw-icon {
-    fill: #7477bf;
+    fill: white;
+    background-color: #7477bf;
+    border-radius: 50%;
+    padding: .38rem;
 }
 
 .fb-text,
@@ -187,7 +190,7 @@ svg {
 .members-container,
 .activity-container {
     display: flex;
-    border-bottom: lightgray 1px solid;
+    border: lightgray 1px solid;
     align-content: center;
     justify-content: flex-end;
     flex-direction: column;
@@ -228,6 +231,14 @@ svg {
 .message textarea {
     background-color: #f5f5f5;
     color: gray;
+}
+
+.message input {
+    height: 3em;
+}
+
+.message textarea {
+    height: 10em;
 }
 
 .message button {
@@ -275,6 +286,7 @@ svg {
             "header header"
             "navigation main";
     }
+
     .main {
         grid-template-columns: 50%;
     }
@@ -284,20 +296,33 @@ svg {
         justify-content: flex-start;
         height: 100%;
     }
+
     .navigation a {
         padding-top: 1em;
     }
 
-    .traffic, .social {
+    .tab {
+        width: 100vw;
+    }
+
+    .alert {
+        width: 90vw;
+    }
+
+   .daily {
         grid-column: 1 / span 1;
     }
     
-    .daily, .members, .message, .activity, .settings {
+    .traffic, .social, .members, .activity, .message, .settings {
         grid-column: 1 / span 2;
     }
 
     .mobile {
         grid-column: 2 / span 1;
+    }
+
+    .message input, .message textarea, .message button {
+        width: 50em;
     }
 
     .widget-container-full{
@@ -307,10 +332,42 @@ svg {
     .widget-container-half {
         width: 45vw;
     }
+
+    .traffic-header ul {
+        display: flex;
+        list-style: none;
+        justify-content: flex-end;
+        align-items: flex-end;
+    }
+
+    .social {
+        display: flex;
+    }
+
+    .members-container,
+    .activity-container {
+    flex-direction: row;
+    justify-content: space-between;
+    }
 }
 
-/* @media (min-width: 1024px) {
-    .grid-container {
+@media (min-width: 1024px) {
+
+    .members, .message {
+        grid-column: 1 / span 1;
+    }
+
+    .activity, .settings {
+        grid-column: 2 / span 1;
+    }
+
+    .message input,
+    .message textarea,
+    .message button {
+        width: 20em;
+    }
+
+    /* .grid-container {
         grid-template-columns: 55px 1fr;
         grid-template-rows: auto 1fr;
         grid-template-areas: 
@@ -348,5 +405,5 @@ svg {
 
     .widget-container-half {
         width: 45vw;
-    }
-} */
+    } */
+}
