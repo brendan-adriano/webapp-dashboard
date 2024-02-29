@@ -48,7 +48,10 @@
             <div class="tab"></div>
         </div>
         <br> 
-        <div class="alert" id="alert">Alert: You have unread messages</div>
+        <div class="alert" id="alert">
+            Alert: You have unread messages
+        </div>
+    <!-- <main class="main"></main> -->
         <section class="traffic">
             <div class="traffic-header">
                 <h3>Traffic</h3>
@@ -64,6 +67,7 @@
                 <canvas id="traffic-chart"></canvas>
             </div>
         </section>
+        <div class="daily-mobile">
         <section class="daily">
             <h3>Daily Traffic</h3>
 
@@ -79,6 +83,7 @@
                 <!--element doughnut graph will attach to-->
                 <canvas id="mobile-chart"></canvas>
             </div>
+        </div>
         </section>
         <div class="social">
             <h3 class="social-header">Social Stats</h3>
@@ -242,5 +247,7 @@
 
 
     </main>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.2/dist/chart.umd.min.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>
