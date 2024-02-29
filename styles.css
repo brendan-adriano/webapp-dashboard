@@ -58,7 +58,7 @@ a {
         transform: rotate(-20deg);
     }
 
-    40%, 80$ {
+    40%, 80% {
         transform: rotate(5deg);
     }
 }
@@ -131,7 +131,7 @@ svg {
     border-left: none;
     background-color: lightgray;
     height: 3vh;
-    width: 12.9rem;
+    width: 80%;
 }
 
 .alert {
@@ -151,9 +151,9 @@ svg {
 .daily, 
 .mobile,
 .social-header,
-.members {
+.members h3 {
     text-transform: uppercase;
-    font-size: .9rem;
+    font-size: .76rem;
 }
 
 .traffic,
@@ -183,9 +183,9 @@ svg {
     list-style: none;
 }
 
-.social {
-    width: 100vw;
-}
+/* .social {
+    width: 30%;
+} */
 
 .fb-container,
 .ig-container,
@@ -193,7 +193,7 @@ svg {
     display: flex;
     background-color: #f5f5f5;
     border-radius: 10px;
-    width: 95vw;
+    width: 85vw;
     margin: .5em .5em;
     padding: 1em 1em;
 }
@@ -225,7 +225,7 @@ svg {
     justify-content: flex-end;
     flex-direction: column;
     align-items: center;
-    padding: 2em 1em;
+    padding: 2em 0em;
 }
 
 .members-container img,
@@ -318,8 +318,12 @@ svg {
             "navigation main";
     }
 
-    .header, .main, .traffic, .members, .activity {
-        max-width: 768px;
+    .header {
+        /* max-width: 768; */
+    }
+
+    .main, .traffic, .members, .activity {
+        /* max-width: 713px; */
     }
 
     .main {
@@ -352,12 +356,12 @@ svg {
     }
 
     .tab {
-        width: 85vw;
+        width: 78vw;
         grid-area: tab;
     }
 
     .alert {
-        width: 90vw;
+        width: 88vw;
         grid-column: 1 / span 2;
         grid-area: alert;
     }
@@ -374,6 +378,17 @@ svg {
     .traffic, .social, .members, .activity, .message, .settings {
         grid-column: 1 / span 2;
     }
+
+    .fb-container,
+    .ig-container,
+    .tw-container {
+    display: flex;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    width: 24vw;
+    margin: .5em .5em;
+    padding: 1em 1em;
+}
 
     .mobile {
         grid-column: 2 / span 1;
@@ -392,7 +407,7 @@ svg {
     }
 
     .widget-container-half {
-        width: 45vw;
+        width: 46.1vw;
     }
 
     .traffic-header ul {
@@ -404,6 +419,7 @@ svg {
 
     .social {
         display: flex;
+        justify-content: space-evenly;
     }
 
     .members-container,
@@ -415,8 +431,15 @@ svg {
 
 @media (min-width: 1024px) {
 
-    .main, .traffic, .members, .activity {
+    /* .header {
         max-width: 1024px;
+    }
+    .main, .traffic, .members, .activity {
+        max-width: 969px;
+    } */
+
+    .tab {
+        width: 83vw;
     }
 
     .members, .message {
@@ -433,43 +456,6 @@ svg {
         width: 20em;
     }
 
-    /* .grid-container {
-        grid-template-columns: 55px 1fr;
-        grid-template-rows: auto 1fr;
-        grid-template-areas: 
-            "header header"
-            "navigation main";
-    }
-    .main {
-        grid-template-columns: 50%;
-    }
-
-    .navigation {
-        flex-direction: column;
-        justify-content: flex-start;
-        height: 100%;
-    }
-    .navigation a {
-        padding-top: 1em;
-    }
-
-    .traffic, .social {
-        grid-column: 1 / span 1;
-    }
-    
-    .daily, .members, .message {
-        grid-column: 1 / span 1;
-    }
-
-    .mobile, .activity, .settings {
-        grid-column: 2 / span 1;
-    }
-
-    .widget-container-full{
-        width: 90vw;
-    }
-
     .widget-container-half {
-        width: 45vw;
-    } */
-}
+        width: 47vw;
+    }
