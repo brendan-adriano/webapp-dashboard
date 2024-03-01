@@ -104,7 +104,7 @@ a {
 .navigation {
     grid-area: navigation;
     background: #4d4c72;
-    height: 5vh;
+    height: 55px;
     display: flex;
     justify-content: space-evenly;
     padding: 1rem;
@@ -208,13 +208,22 @@ svg {
     padding: 1em 1em;
 }
 
-.fb-icon,
-.ig-icon,
-.tw-icon {
+.fb-image,
+.ig-image,
+.tw-image {
     fill: white;
     background-color: #7477bf;
     border-radius: 50%;
-    padding: .38rem;
+    padding: .5rem;
+    height: 3em;
+    width: 3em;
+}
+
+.fb-icon,
+.ig-icon,
+.tw-icon {
+    align-items: center;
+    height: 2em;
 }
 
 .fb-text,
@@ -244,7 +253,12 @@ svg {
     height: 8vh;
 }
 
-.members-text {
+.more-icon {
+    display: none;
+}
+
+.members-text,
+.activity-text {
     text-align: center;
 }
 
@@ -289,11 +303,8 @@ svg {
 .settings {
     display: flex;
     flex-direction: column;
-    align-items: center;
-}
-
-.settings h3 {
-    padding-right: 11em;
+    /* align-items: center; */
+    padding: 1em;
 }
 
 .settings select {
@@ -301,17 +312,31 @@ svg {
     border-radius: 4px;
 }
 
+.settings label {
+    display: inline-flex;
+    justify-content: space-between;
+    width: 80%;
+}
+
+/* .settings label > strong {
+    padding-right: 18em;
+} */
+
+.switch-ios.switch-light > span {
+    width: 30%;
+}
+
 #save {
     background-color: #7477bf;
     color: white;
     border-radius: 4px;
-    width: 5em;
+    width: 45%;
 }
 
 #cancel {
     background-color: #f5f5f5;
     border-radius: 4px;
-    width: 5em;
+    width: 45%;
 }
 
 .widget-container-full, .widget-container-half {
@@ -356,7 +381,7 @@ svg {
     }
 
     .green {
-        right: 192px;
+        right: 179px;
     }
 
     .navigation {
@@ -404,7 +429,7 @@ svg {
     display: flex;
     background-color: #f5f5f5;
     border-radius: 10px;
-    width: 24vw;
+    width: 30%;
     margin: .5em .5em;
     padding: 1em 1em;
 }
@@ -416,6 +441,21 @@ svg {
     /* .members-activity {
         display: flex;
     } */
+
+    .members-text {
+        padding-right: 22em;
+        text-align: left;
+    }
+
+    .activity-text {
+        text-align: start;
+        padding-right: 11em;
+        padding-left: 1em;
+    }
+
+    .more-icon {
+        display: block;
+    }
 
     .message h3{
         padding: 1em;
@@ -442,7 +482,11 @@ svg {
 
     .social {
         display: flex;
-        justify-content: space-evenly;
+        flex-direction: column;
+        height: 8rem;
+        align-content: stretch;
+        justify-content: flex-end;
+        flex-wrap: wrap;
     }
 
     .members-container,
@@ -504,10 +548,24 @@ svg {
         display: flex;
     }
 
+    .members-container, .activity-container {
+        padding: 1em 1em;
+    }
+
+    .members-container,
+    .activity-container {
+        height: 9em;
+    }
+
     .members {
         grid-area: members;
         display: flex;
         flex-direction: column;
+        justify-content: flex-end;
+    }
+
+    .members-text {
+        padding-right: 7em;
     }
 
     .activity {
@@ -528,14 +586,14 @@ svg {
     }
 
     .green {
-        right: 193px;
+        right: 179px;
     }
 
-    .fb-container,
+    /* .fb-container,
     .ig-container,
     .tw-container {
     width: 100%;
-}
+} */
 
     .tab {
         width: 100%;
