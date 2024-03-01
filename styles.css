@@ -71,6 +71,16 @@ a {
     margin: .5em 2.5em .5em 0.5em;
 }
 
+.green {
+    border-radius: 50%;
+    height: 5px;
+    width: 5px;
+    background-color:lightgreen;
+    position: absolute;
+    top: 11px;
+    right: 156px;
+}
+
 .student-img {
     border-radius: 50%;
     height: 2em;
@@ -345,6 +355,10 @@ svg {
         grid-area: headline;
     }
 
+    .green {
+        right: 192px;
+    }
+
     .navigation {
         flex-direction: column;
         justify-content: flex-start;
@@ -374,6 +388,7 @@ svg {
    .daily {
         grid-column: 1 / span 1;
     }
+
 /* 
     .traffic {
         grid-area: traffic;
@@ -445,30 +460,110 @@ svg {
 
     /* .header {
         max-width: 1024px;
-    }
-    .main, .traffic, .members, .activity {
+    }  */
+
+     .main, .traffic, .members, .activity {
         max-width: 969px;
-    } */
+    }
+
+    .main {
+        grid-template-columns: 50% 50%;
+    }
+
+    .main {
+        grid-template-areas: 
+        'main-header main-header'
+        'alert alert'
+        'traffic traffic'
+        'daily mobile'
+        'social social'
+        'members activity'
+        'message settings';
+    }
+
+    .traffic {
+        grid-area: traffic;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .daily {
+        grid-area: daily;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .mobile {
+        grid-area: mobile;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .social {
+        grid-area: social;
+        display: flex;
+    }
+
+    .members {
+        grid-area: members;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .activity {
+        grid-area: activity;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .message {
+        grid-area: message;
+        display: flex;
+    }
+
+    .settings {
+        grid-area: settings;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .green {
+        right: 193px;
+    }
+
+    .fb-container,
+    .ig-container,
+    .tw-container {
+    width: 100%;
+}
 
     .tab {
         width: 100%;
     }
 
+    .alert {
+        width: 90%;
+    }
+
+    .msg-sec {
+        display: grid;
+    }
+
     .members, .message {
-        grid-column: 1 / span 1;
+        grid-column: 1;
     }
 
     .activity, .settings {
-        grid-column: 2 / span 1;
+        grid-column: 2;
     }
 
     .members-container,
     .activity-container {
-        width:100%;
+        width: 100%;
     }
 
     .message input, .message textarea, .message button {
-        width: 100%;
+        width: 93%;
         margin: .5em 1em;
     }
 
