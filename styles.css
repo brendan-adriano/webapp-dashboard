@@ -193,9 +193,11 @@ svg {
     list-style: none;
 }
 
-/* .social {
-    width: 30%;
-} */
+.social {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
 
 .fb-container,
 .ig-container,
@@ -240,11 +242,16 @@ svg {
 .activity-container {
     display: flex;
     border: lightgray 1px solid;
+    border-bottom: none;
     align-content: center;
     justify-content: flex-end;
     flex-direction: column;
     align-items: center;
     padding: 2em 0em;
+}
+
+.members-container:nth-child(4) {
+    border-bottom: none;
 }
 
 .members-container img,
@@ -264,12 +271,18 @@ svg {
 
 .message {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
+    flex-wrap: wrap;
 }
 
+.traffic h3, 
+.daily h3, 
+.mobile h3, 
+.social h3, 
+.members h3, 
 .message h3 {
-    padding-right: 9em;
+    padding-left: 1em;
 }
 
 .message input,
@@ -310,12 +323,19 @@ svg {
 .settings select {
     background-color: #f5f5f5;
     border-radius: 4px;
+    margin: 1em;
 }
 
 .settings label {
     display: inline-flex;
     justify-content: space-between;
     width: 80%;
+    margin: 1em 1em;
+}
+
+.settings-button {
+    display: flex;
+    justify-content: space-evenly;
 }
 
 /* .settings label > strong {
@@ -337,6 +357,10 @@ svg {
     background-color: #f5f5f5;
     border-radius: 4px;
     width: 45%;
+}
+
+.widget-container {
+    width: 90%;
 }
 
 .widget-container-full, .widget-container-half {
@@ -451,6 +475,7 @@ svg {
         text-align: start;
         padding-right: 11em;
         padding-left: 1em;
+        flex-grow: 1;
     }
 
     .more-icon {
@@ -489,11 +514,17 @@ svg {
         flex-wrap: wrap;
     }
 
-    .members-container,
-    .activity-container {
+    .members-container {
     flex-direction: row;
     justify-content: space-between;
+    padding: 1em 1em;
     }
+
+    .activity-container {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 1em 1em;
+        }
 
     .settings h3 {
         padding-right: 0em;
@@ -550,6 +581,7 @@ svg {
 
     .members-container, .activity-container {
         padding: 1em 1em;
+        border-bottom: 1px solid lightgray;
     }
 
     .members-container,
@@ -572,6 +604,10 @@ svg {
         grid-area: activity;
         display: flex;
         flex-direction: column;
+    }
+
+    .activity-text {
+        padding-right: 0;
     }
 
     .message {
