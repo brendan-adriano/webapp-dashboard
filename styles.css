@@ -20,6 +20,10 @@ a {
         ;
 }
 
+/* .main, .traffic, .social, .members, .activity, .message, .settings {
+    width: 320px;
+} */
+
   .header { 
     background: #7477bf;
     height: 5vh;
@@ -141,7 +145,7 @@ svg {
     border-left: none;
     background-color: lightgray;
     height: 3vh;
-    width: 60%;
+    width: 65%;
 }
 
 .alert {
@@ -264,6 +268,10 @@ svg {
     display: none;
 }
 
+.members-text {
+    max-width: 72%;
+}
+
 .members-text,
 .activity-text {
     text-align: center;
@@ -274,6 +282,7 @@ svg {
     flex-direction: row;
     align-items: center;
     flex-wrap: wrap;
+    /* padding: 1em; */
 }
 
 .traffic h3, 
@@ -283,6 +292,7 @@ svg {
 .members h3, 
 .message h3 {
     padding-left: 1em;
+    padding-top: .5em;
 }
 
 .message input,
@@ -318,6 +328,7 @@ svg {
     flex-direction: column;
     /* align-items: center; */
     padding: 1em;
+    font-
 }
 
 .settings select {
@@ -331,16 +342,19 @@ svg {
     justify-content: space-between;
     width: 80%;
     margin: 1em 1em;
+    font-size: .8em;
 }
 
 .settings-button {
     display: flex;
     justify-content: space-evenly;
+    align-items: center;
 }
 
-/* .settings label > strong {
-    padding-right: 18em;
-} */
+.settings label > strong {
+    width: 10rem;
+    text-wrap: nowrap;
+}
 
 .switch-ios.switch-light > span {
     width: 30%;
@@ -382,7 +396,7 @@ svg {
     }
 
     .main, .traffic, .members, .activity {
-        /* max-width: 713px; */
+        max-width: 713px;
     }
 
     .main {
@@ -482,12 +496,28 @@ svg {
         display: block;
     }
 
+    .message {
+        padding: 1em;
+    }
+
     .message h3{
         padding: 1em;
     }
 
     .message input, .message textarea, .message button {
-        width: 100%;
+        width: 105%;
+    }
+
+    .message button,
+    .button-primary,
+    .form-field,
+    .class {
+        height: 5vh;
+    }
+
+    .button-primary,
+    .class {
+        width: 47%;
     }
 
     .widget-container-full{
@@ -529,6 +559,12 @@ svg {
     .settings h3 {
         padding-right: 0em;
     }
+
+    .settings label {
+        width: 50%;
+        font-size: 1em;
+    }
+
 }
 
 @media (min-width: 1024px) {
@@ -598,6 +634,7 @@ svg {
 
     .members-text {
         padding-right: 7em;
+        max-width: 56%;
     }
 
     .activity {
@@ -657,8 +694,12 @@ svg {
     }
 
     .message input, .message textarea, .message button {
-        width: 93%;
+        width: 103%;
         margin: .5em 1em;
+    }
+
+    .settings label {
+        width: 70%;
     }
 
     .widget-container-half {
